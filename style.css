@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(backG.jpg);
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.body {
+    width: 200px;
+    height: 150px;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    text-align: center;
+    margin-top: 0;     
+    margin-bottom: 5px;
+}
+
+.container {
+    background-color: rgb(201, 58, 245);
+    padding: 20px;
+    border: 2px solid black;
+    width: 400px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15) ;
+    text-align: justify;
+    margin-top: 20px;
+    
+}
+
+.container:hover {
+    background-color: rgb(170, 30, 220); /* changes color on hover */
+    transform: scale(1.03); /* slightly grows */
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
+}
+
+.signature {
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+    color: white;
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.slider span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 125px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* reduce body padding */
+    }
+}

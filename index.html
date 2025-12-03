@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="myAudio" src="Para.mp3"></audio>
+
+<script>
+document.addEventListener("click", () => {
+    const audio = document.getElementById("myAudio");
+
+    function playTwoMinutes() {
+        audio.currentTime = 0;   // start from beginning
+        audio.play();
+
+        // Stop after 2 minutes (120,000 ms)
+        setTimeout(() => {
+            audio.pause();
+            audio.currentTime = 0;  // reset again
+            playTwoMinutes();       // loop back and play again
+        }, 117000);
+    }
+
+    playTwoMinutes();
+
+}, { once: true }); // Only activate on the first click
+</script>
+
+    
+    <div class="slider">
+        <span style="--i:1;"><img src="img1.jpg" alt=""></span>
+        <span style="--i:2;"><img src="img2.jpg" alt=""></span>
+        <span style="--i:3;"><img src="img3.jpg" alt=""></span>
+        <span style="--i:4;"><img src="img4.jpg" alt=""></span>
+        <span style="--i:5;"><img src="img5.jpg" alt=""></span>
+        <span style="--i:6;"><img src="img6.jpg" alt=""></span>
+        <span style="--i:7;"><img src="img7.jpg" alt=""></span>
+        <span style="--i:8;"><img src="img8.jpg" alt=""></span>
+    </div>
+
+     <h3>For you, my babyy 💟</h3>
+
+    <div class="container">
+
+        <p class="name-line">My lovely dear <span style="color: rgb(255, 255, 255);">Lyza,</span></p>
+
+        <p>
+            Happy 7th Monthsary, byy! Yeyyy, the year is coming up to its end and we're still together
+            and is still going strong. Within this special day, I wanna express again how much I adore 
+            and love you. You help me grow as a person and you turn me into someone who's capable at 
+            everything. I loveee youuu po! Veryy veryy muchhhh! Thank you for everything, thank you for 
+            coming into my life and made it better than before. God is my witness how much I've prayed 
+            for having this kind of relationship. I'm so blessed that He gave me you. And I hope that He 
+            will let me take care of you until we grow up. I'll always be here for you, okayy? Make sure
+            that you'll run to me when everything feels heavy, I'll be here po for you, my wuvvy honney babyy!
+            Let's witness more months and years to come, okayy? I want it with you, and only you! <span style="color: rgb(255, 255, 255)">
+             I loveee youuuu, byy! Happy 7th monthsary again!</span>
+        </p>
+    <div class="signature">Loving you always, <br> Sean Myco 💕</div>
+    </div> 
+
+</body>
+</html>
